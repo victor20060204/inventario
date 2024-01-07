@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tallas por Referencia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+  <div>
+    <h1>REFERENCIAS CYC DAMA</h1>
+    
+  </div>
+   <input type="text" id="searchInput" placeholder="Buscar por referencia" oninput="searchReferences()">
+  <script>
+      function searchReferences() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("searchInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("tallasTable");
+          tr = table.getElementsByTagName("tr");
+
+          for (i = 1; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      tr[i].style.display = "";
+                  } else {
+                      tr[i].style.display = "none";
+                  }
+              }
+          }
+      }
+  </script>
+  <HR>
+  
+
+
+  
+
+    <table id="tallasTable">
+        <thead>
+            <tr>
+              <th>Referencia</th>
+                      <th>6</th>
+                      <th>8</th>
+                      <th>10</th>
+                      <th>12</th>
+                      <th>14</th>
+                      <th>16</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1523</td>
+                      <td>6</td>
+                      <td>8</td>
+                      <td>10</td>
+                      <td>12</td>
+                      <td>14</td>
+                      <td>16</td>
+                  </tr>
+                  <tr>
+                      <td>1564</td>
+                      <td></td>
+                      <td>8</td>
+                      <td>10</td>
+                      <td></td>
+                      <td></td>
+                      <td>16</td>
+                  </tr>
+                  <tr>
+                      <td>1534</td>
+                      <td></td>
+                      <td></td>
+                      <td>10</td>
+                      <td>12</td>
+                      <td>14</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td>1562</td>
+                      <td>6</td>
+                      <td>8</td>
+                      <td>10</td>
+                      <td></td>
+                      <td>14</td>
+                      <td>16</td>
+                  </tr>
+                  <tr>
+                      <td>1552</td>
+                      <td></td>
+                      <td></td>
+                      <td>10</td>
+                      <td>12</td>
+                      <td></td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td>1524</td>
+                      <td></td>
+                      <td>8</td>
+                      <td>10</td>
+                      <td></td>
+                      <td>14</td>
+                      <td>16</td>
+                  </tr>
+                  <tr>
+                      <td>1478</td>
+                      <td>6</td>
+                      <td>8</td>
+                      <td>10</td>
+                      <td>12</td>
+                      <td>14</td>
+                      <td>16</td>
+            </tr>
+            <!-- Agrega las demás filas según tu información -->
+        </tbody>
+    </table>
+
+
+   
+
+</body>
+</html>
