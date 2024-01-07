@@ -1,0 +1,2 @@
+# inventario
+inventari x2
